@@ -9,6 +9,7 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
+            <h1 className="App-title">Nina knows things.</h1>
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <a

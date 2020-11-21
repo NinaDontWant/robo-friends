@@ -1,0 +1,15 @@
+h1 {
+    color:darkcyan;
+    font-weight: 700;
+    font-style: oblique;
+}
+
+p {
+    color: darkblue;
+}
+
+.Hello {
+    background-color: rgba(80, 139, 139, .2);
+    margin: 0 12.5%;
+    padding: 3rem 6rem;
+}

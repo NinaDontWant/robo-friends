@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
+import Hello from './Hello';
 import reportWebVitals from './reportWebVitals';
+import 'tachyons'; 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
+  <Hello greeting={"Hey there guys, gals and pals!"} />,
+  // <h1>Hello World</h1>,
   document.getElementById('root')
 );
 
