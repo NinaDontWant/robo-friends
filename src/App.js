@@ -8,7 +8,7 @@ import SearchComponent from './SearchComponent';
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className="App tc ">
         <header className="App-header">
           <p>
             <h1 className="App-title">Robo friends</h1>
