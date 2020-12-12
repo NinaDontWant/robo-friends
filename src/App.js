@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-//import './App.css';
+import './App.css';
 import { robots } from './robots';
 import CardList from './CardList.js';
 import SearchComponent from './SearchComponent';
+ 
 
 // robots and SearchComponent are both children of the same parent, App. You see this because the class App has properties in 'this.state' and those are the children. what state should 'this' have so that the child can communicate with its parent aka the SearchComponent with its parent who will then talk to the other child, robots, and pass on information?
 
@@ -27,7 +28,7 @@ class App extends Component {
     return (
       <div className="App tc ">
         <header className="App-header">
-          <h1 className="App-title">Robo friends</h1>
+          <h1 className="f1">Robo friends</h1>
         </header>
         <SearchComponent searchChange={this.onSearchChange} />
         <CardList robots={filteredRobots}/>
