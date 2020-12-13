@@ -21,7 +21,7 @@ export const robots = [
         id: 4,
         name: 'Dora Donnerstag',
         username: 'Dodo',
-        email: 'me-1982-me@gmail.com'
+        email: 'dodo1982.spam@gmail.com'
     },
     {
         id: 5,
