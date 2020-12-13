@@ -5,6 +5,7 @@ import './App.css';
 import { robots } from './robots';
 import CardList from './CardList.js';
 import SearchComponent from './SearchComponent';
+import Scroll from './Scroll';
  
 
 // robots and SearchComponent are both children of the same parent, App. You see this because the class App has properties in 'this.state' and those are the children. The child can communicate with its parent --> the SearchComponent can communicate with its parent who will then talk to the other child, robots, and pass on information stored in "this". 
@@ -44,7 +45,9 @@ class App extends Component {
             <h1 className="f1">Robo friends</h1>
           </header>
           <SearchComponent searchChange={this.onSearchChange} />
-          <CardList robots={filteredRobots} />
+          <Scroll>
+            <CardList robots={filteredRobots} />
+          </Scroll>
         </div>
       );
     }
