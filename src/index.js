@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 // import Hello from './Hello';
 // import Card from './Card';
-import CardList from './CardList.js';
+import CardList from './components/CardList.js';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'; 
 import { robots } from './robots';

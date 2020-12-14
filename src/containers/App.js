@@ -2,10 +2,10 @@
 
 import React, { Component } from 'react';
 import './App.css';
-import { robots } from './robots';
-import CardList from './CardList.js';
-import SearchComponent from './SearchComponent';
-import Scroll from './Scroll';
+import { robots } from '../robots';
+import CardList from '../components/CardList.js';
+import SearchComponent from '../components/SearchComponent';
+import Scroll from '../components/Scroll';
  
 
 // robots and SearchComponent are both children of the same parent, App. You see this because the class App has properties in 'this.state' and those are the children. The child can communicate with its parent --> the SearchComponent can communicate with its parent who will then talk to the other child, robots, and pass on information stored in "this". 
@@ -33,13 +33,13 @@ class App extends Component {
   }
   
   render() {
-    const filteredRobots = this.state.robots.filter(robots => {
-      return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    const { robots, searchfield } = this.state;
+    const filteredRobots = robots.filter(robot => {
+      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
-    if (this.state.robots.length === 0) {
-      return <h1>Loading...</h1>
-    } else {
-      return (
+    return (!robots.length) ?
+      <h1>Loading...</h1> :
+      (
         <div className="App tc ">
           <header className="App-header">
             <h1 className="f1">Robo friends</h1>
@@ -50,7 +50,7 @@ class App extends Component {
           </Scroll>
         </div>
       );
-    }
+    
   }  
 }
  
